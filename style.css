@@ -12,6 +12,36 @@ body {
   --secondary-color: #fff;
 }
 
+.about-me-wrapper h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 900;
+  z-index: 1;
+  position: relative;
+  color: var(--secondary-color);
+}
+
+.about-me-wrapper h2 span {
+  top: 30px;
+  color: transparent;
+  font-size: 150px;
+  font-weight: 900;
+  opacity: 0.1;
+  line-height: 0;
+  -webkit-text-stroke: 2px white;
+  z-index: -1;
+  position: absolute;
+}
+
+.about-me-wrapper h2:before {
+  content: "";
+  background: #342b1c;
+  height: 2px;
+  width: 50px;
+  display: block;
+  position: relative;
+}
+
 /* Color Picker */
 
 .settings {
@@ -415,40 +445,23 @@ li button {
   justify-content: space-between;
   max-width: 1700px;
   width: 100%;
+  height: 400px;
 }
 
 .a-m-about h2 {
-  font-size: 3em;
-  text-transform: uppercase;
-  font-weight: 900;
   margin: 0 0 100px;
   position: relative;
-  color: var(--secondary-color);
 }
 
 .a-m-about h2 span {
-  position: absolute;
   left: -6px;
-  top: 30px;
-  color: transparent;
-  font-size: 150px;
-  font-weight: 900;
-  opacity: 0.1;
-  line-height: 0;
-  -webkit-text-stroke: 2px white;
 }
 
 .a-m-about h2:before {
-  content: "";
-  background: #342b1c;
-  height: 2px;
-  width: 50px;
-  display: block;
-  position: relative;
   bottom: -150px;
 }
 
-.a-m-about > div {
+.a-m-about-para {
   width: 500px;
 }
 
@@ -466,7 +479,7 @@ li button {
   width: 400px;
   display: block;
   position: absolute;
-  right: 125px;
+  right: 25px;
   bottom: -25px;
   border: 2px solid #3b3b3b;
 }
@@ -478,7 +491,7 @@ li button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .about-skills {
@@ -493,36 +506,18 @@ li button {
 }
 
 .about-skills-wrapper h2 {
-  position: relative;
-  font-size: 3em;
-  text-transform: uppercase;
-  font-weight: 900;
   margin-bottom: 100px;
   left: 10px;
   align-self: baseline;
 }
 
 .about-skills-wrapper h2:before {
-  content: "";
-  background: #342b1c;
-  height: 2px;
-  width: 50px;
-  display: block;
-  position: relative;
   bottom: -165px;
   left: -6px;
 }
 
 .about-skills-wrapper h2 span {
-  position: absolute;
-  top: 30px;
   left: -16px;
-  color: transparent;
-  font-size: 150px;
-  font-weight: 900;
-  opacity: 0.1;
-  line-height: 0;
-  -webkit-text-stroke: 2px white;
 }
 
 .skill-bar-wrapper {
@@ -620,27 +615,21 @@ li button {
   align-items: center;
   height: 100vh;
   min-height: 800px;
+  /* margin-top: 1000px; */
 }
 
 .contact-wrapper h2 {
-  position: relative;
-  font-size: 3em;
-  text-transform: uppercase;
-  font-weight: 900;
   margin-bottom: 125px;
   left: 10px;
 }
 
 .contact-wrapper h2 span {
-  position: absolute;
-  top: 30px;
   right: -190px;
-  color: transparent;
-  font-size: 150px;
-  font-weight: 900;
-  opacity: 0.1;
-  line-height: 0;
-  -webkit-text-stroke: 2px white;
+}
+
+.contact-wrapper h2::before {
+  top: 160px;
+  left: 150px;
 }
 
 input,

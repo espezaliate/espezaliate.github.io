@@ -13,7 +13,7 @@ const armyFont = document.querySelector('.army')
 const redFont = document.querySelector('.red')
 
 blueFont.addEventListener('click', function(){
-    document.documentElement.style.setProperty('--secondary-color', '#0000ff');
+    document.documentElement.style.setProperty('--secondary-color', 'rgba(0, 0, 255, 0.9)');
 })
 
 greenFont.addEventListener('click', function(){
