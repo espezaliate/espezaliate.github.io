@@ -423,6 +423,7 @@ li button {
   font-weight: 900;
   margin: 0 0 100px;
   position: relative;
+  color: var(--secondary-color);
 }
 
 .a-m-about h2 span {
@@ -694,13 +695,12 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
   background: rgb(15, 15, 15);
-}
-
-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
 }
 
 button:active {
