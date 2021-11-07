@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+* {
   font-family: "Montserrat";
 }
 
@@ -185,9 +189,6 @@ li button {
   }
 }
 
-.color-picker-open {
-}
-
 /* Home page */
 
 .landing-page-wrapper {
@@ -352,7 +353,7 @@ li button {
 /* About me landing */
 
 .about-me-wrapper {
-  height: 1000vh;
+  height: 100%;
   background-color: black;
   flex-direction: column;
   color: white;
@@ -405,14 +406,14 @@ li button {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 800px;
+  justify-content: center;
 }
 
 .a-m-about {
   display: flex;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 1700px;
   width: 100%;
 }
 
@@ -475,20 +476,29 @@ li button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   min-height: 800px;
+  max-width: 1700px;
+  width: 100%;
 }
 
 .about-skills-wrapper h2 {
-  text-align: center;
-  margin-bottom: 150px;
   position: relative;
-  height: 100px;
-  top: 50px;
   font-size: 3em;
   text-transform: uppercase;
   font-weight: 900;
-  right: 106px;
+  margin-bottom: 100px;
+  left: 10px;
+  align-self: baseline;
 }
 
 .about-skills-wrapper h2:before {
@@ -498,14 +508,14 @@ li button {
   width: 50px;
   display: block;
   position: relative;
-  bottom: -195px;
-  left: 156px;
+  bottom: -165px;
+  left: -6px;
 }
 
 .about-skills-wrapper h2 span {
-  position: relative;
-  top: 35px;
-  right: 200px;
+  position: absolute;
+  top: 30px;
+  left: -16px;
   color: transparent;
   font-size: 150px;
   font-weight: 900;
@@ -517,18 +527,20 @@ li button {
 .skill-bar-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 550px;
+  align-content: space-between;
+  height: 450px;
   flex-wrap: wrap;
-  max-width: 1500px;
+  width: 100%;
+  max-width: 1600px;
+  justify-content: space-between;
 }
 
 .skill {
   position: relative;
-  max-width: 650px;
-  width: 100%;
+  max-width: 625px;
+  width: 50%;
   margin: 0 5px 30px;
-  height: 100px;
+  height: 70px;
 }
 
 .skill:before {
@@ -539,7 +551,7 @@ li button {
   display: block;
   position: absolute;
   background: #232323;
-  bottom: 38px;
+  bottom: 10px;
 }
 
 .skill-bar {
@@ -563,7 +575,7 @@ li button {
   position: absolute;
   font-size: 12px;
   top: -43px;
-  right: 0;
+  right: -15px;
 }
 
 .skill-1 {
@@ -596,6 +608,103 @@ li button {
 
 .skill-8 {
   width: 0%;
+}
+
+/* Contact Section */
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 800px;
+}
+
+.contact-wrapper h2 {
+  position: relative;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 125px;
+  left: 10px;
+}
+
+.contact-wrapper h2 span {
+  position: absolute;
+  top: 30px;
+  right: -190px;
+  color: transparent;
+  font-size: 150px;
+  font-weight: 900;
+  opacity: 0.1;
+  line-height: 0;
+  -webkit-text-stroke: 2px white;
+}
+
+input,
+textarea {
+  width: 800px;
+  background-color: black;
+  height: 30px;
+  padding: 20px;
+  border: 2px solid #1b1b1b;
+  border-bottom: 2px solid #342b1c;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+textarea {
+  resize: none;
+  /* font-size: 1.3em; */
+  height: 100px;
+}
+
+button {
+  display: inline-block;
+  border: 2px solid #1b1b1b;
+  border-bottom: 2px solid #342b1c;
+  padding: 20px;
+  margin: 0;
+  text-decoration: none;
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button:hover,
+button:focus {
+  background: rgb(15, 15, 15);
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }
 
 @media only screen and (max-width: 650px) {
